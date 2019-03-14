@@ -19,10 +19,10 @@ public class ProxyList {
 
 		// retrieving the deployed revisions details
 		// resource url
-		WebTarget target1 = client
-				.target(protocol + "://" + domainName + "/v1/organizations/" + orgName + "/deployments");
-
+		WebTarget target1 = client.target(protocol + "://" + domainName + "/v1/organizations/" + orgName + "/deployments"); 
 		String responseValue = target1.request(MediaType.APPLICATION_JSON).get(String.class);
+
+//		String responseValue = target1.request(MediaType.APPLICATION_JSON).get(String.class);
 
 		JSONObject json;
 		try {

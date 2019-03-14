@@ -23,11 +23,11 @@ public class RetainRevisions {
 
 		return set;
 	}
-	public static void printIntoFile(Set<String> retainRevisionSet,String proxyname, String outputFilePath) throws IOException {
+	public static void printIntoFile(Set<String> retainRevisionSet,String proxyname, String orgName) throws IOException {
 
         //try { 
   
-        	String fileName =outputFilePath;
+        	String fileName = "deleterevisions_"+orgName+"_output.txt";
             // Open given file in append mode. 
             BufferedWriter out = new BufferedWriter( 
                    new FileWriter(fileName, true)); 
@@ -42,7 +42,7 @@ public class RetainRevisions {
             out.close(); 
        // } 
 //        catch (IOException e) { 
-//            System.out.println("exception occoured" + e); 
+//            System.out.println("exception occoured while writing the output into the file" + e); 
 //        } 
 		
 	}
